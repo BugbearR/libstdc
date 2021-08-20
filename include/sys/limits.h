@@ -8,6 +8,8 @@
 #ifndef _BBRLIBSTDC_SYS_LIMITS_H_
 #define _BBRLIBSTDC_SYS_LIMITS_H_
 
+#include <sys/base.h>
+
 /** Bit size of char type */
 #define CHAR_BIT (8)
 
