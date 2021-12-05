@@ -53,7 +53,7 @@
  */
 #define USHRT_MAX (65535)
 
-#if INT_BIT == 32
+#if _BBRLIBSTDC_INT_BIT == 32
 /**
  * @brief min value of signed int
  */
@@ -68,7 +68,7 @@
  * @brief max value of unsigned int
  */
 #define UINT_MAX (4294967295)
-#elif INT_BIT == 64
+#elif _BBRLIBSTDC_INT_BIT == 64
 /**
  * @brief min value of signed int
  */
@@ -85,7 +85,7 @@
 #define UINT_MAX (18446744073709551615)
 #endif
 
-#if LONG_BIT == 32
+#if _BBRLIBSTDC_LONG_BIT == 32
 /**
  * @brief min value of signed long
  */
@@ -100,7 +100,7 @@
  * @brief max value of unsigned long
  */
 #define ULONG_MAX (4294967295UL)
-#elif LONG_BIT == 64
+#elif _BBRLIBSTDC_LONG_BIT == 64
 /**
  * @brief min value of signed long
  */
