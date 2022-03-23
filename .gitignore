@@ -1,0 +1,11 @@
+# local directory
+lib
+build
+dist
+junk
+
+# local file
+Makefile.local.mk
+
+# IDE
+.vscode
