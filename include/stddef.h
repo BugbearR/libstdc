@@ -8,7 +8,7 @@
 #ifndef _BBRLIBSTDC_STDDEF_H_
 #define _BBRLIBSTDC_STDDEF_H_
 
-#include <sys/stddef.h>
+#include <depend/stddef.h>
 
 /**
  * @brief NULL pointer macro
@@ -20,8 +20,8 @@
  * @param TYPE type of struct
  * @param MEMBER member
  */
-#ifdef __compiler_offsetof
-#define offsetof(TYPE, MEMBER) __compiler_offsetof(TYPE, MEMBER)
+#ifdef _BBRLIBSTDC_compiler_offsetof
+#define offsetof(TYPE, MEMBER) _BBRLIBSTDC_compiler_offsetof(TYPE, MEMBER)
 #else
 #define offsetof(TYPE, MEMBER) ((size_t)(((char*)&(((TYPE*)0)->MEMBER))-((char*)0)))
 #endif

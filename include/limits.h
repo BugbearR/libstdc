@@ -8,6 +8,6 @@
 #ifndef _BBRLIBSTDC_LIMITS_H_
 #define _BBRLIBSTDC_LIMITS_H_
 
-#include <sys/limits.h>
+#include <depend/limits.h>
 
 #endif /* _BBRLIBSTDC_LIMITS_H_ */
