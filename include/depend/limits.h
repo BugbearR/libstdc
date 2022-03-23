@@ -1,15 +1,16 @@
 /**
- * @file sys/limits.h
+ * @file depend/limits.h
  * @author BugbearR (bugbearr@gmail.com)
  * @brief System dependent limitation header
  * @version 0.1.0
  * @date 2021-08-11
  */
-#ifndef _BBRLIBSTDC_SYS_LIMITS_H_
-#define _BBRLIBSTDC_SYS_LIMITS_H_
+#ifndef _BBRLIBSTDC_DEPEND_LIMITS_H_
+#define _BBRLIBSTDC_DEPEND_LIMITS_H_
 
-#include <sys/base.h>
+#include <depend/base.h>
 
+#if _BBRLIBSTDC_CHAR_BIT == 8
 /** Bit size of char type */
 #define CHAR_BIT (8)
 
@@ -37,7 +38,11 @@
  * @brief max value of unsigned char
  */
 #define UCHAR_MAX (255)
+#else
+#error Unknown char bit size
+#endif
 
+#if _BBRLIBSTDC_SHORT_BIT == 16
 /**
  * @brief min value of signed short
  */
@@ -52,6 +57,9 @@
  * @brief max value of unsigned short
  */
 #define USHRT_MAX (65535)
+#else
+#error Unknown short bit size
+#endif
 
 #if _BBRLIBSTDC_INT_BIT == 32
 /**
@@ -83,6 +91,8 @@
  * @brief max value of unsigned int
  */
 #define UINT_MAX (18446744073709551615)
+#else
+#error Unknown int bit size
 #endif
 
 #if _BBRLIBSTDC_LONG_BIT == 32
@@ -115,6 +125,8 @@
  * @brief max value of unsigned long
  */
 #define ULONG_MAX (18446744073709551615UL)
+#else
+#error Unknown long bit size
 #endif
 
 #endif /* _BBRLIBSTDC_SYS_LIMITS_H_ */
